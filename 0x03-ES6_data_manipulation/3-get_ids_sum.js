@@ -1,9 +1,3 @@
-const getListStudentIds = (getList) => {
-    let lisdata = [];
-    if (!(getList instanceof Array)) {
-      return lisdata;
-    }
-    lisdata = getList.map((results) => results.id);
-    return lisdata;
-  };
-  export default getListStudentIds;
+export default function getStudentIdsSum(students) {
+    return students.reduce((acc, c) => acc + c.id, 0);
+  }
